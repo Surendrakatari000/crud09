@@ -1,0 +1,13 @@
+
+<h2>Edit Product</h2>
+
+<%= form_with model: @product, url: "/products/#{@product.id}", method: :patch, local: true do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>  
+  </div>
+
+  <div>
+    <%= form.submit 'Update Product' %>
+  </div>
+<% end %>

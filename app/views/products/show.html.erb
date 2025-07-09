@@ -1,0 +1,8 @@
+<h1>this is your prefered result</h1>
+<p> <%= @product.name %> </p>
+
+<p>
+  <%= link_to 'Edit', "/products/#{@product.id}/edit" %> |
+  <%= link_to 'Back to List', "/products" %> |
+  <%= button_to 'Delete', "/products/#{@product.id}", method: :delete, data: { confirm: 'Are you sure you want to delete?' } %>
+</p>
